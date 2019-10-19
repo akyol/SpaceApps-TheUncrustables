@@ -1,0 +1,11 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.progress {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
