@@ -1,5 +1,4 @@
 html, body {
-    max-width: 100%;
     overflow-x: hidden;
     font-family: 'Press Start 2P', cursive;
 }
@@ -13,3 +12,34 @@ html, body {
 .progress-bar {
     background-color: #28a745;
 }
+
+/* Text box width */
+.container {
+    max-width: 900px;
+}
+
+/* Text box */
+.speech-bubble {
+    position: relative;
+	background: #00aabb;
+    border-radius: .4em;
+    margin: 100px;
+}
+
+/* Text arrow */
+.speech-bubble:after {
+    
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+ 
