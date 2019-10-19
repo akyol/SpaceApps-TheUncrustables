@@ -1,4 +1,8 @@
-var questions = {
+var counter = 0;
+
+var questions = ["", "", "", ""];
+
+var answers = {
     1: {
         a: {
             message: "",
@@ -52,8 +56,8 @@ var questions = {
             message: "",
             correct: true
         }
-    }
-                4: {
+    },
+    4: {
         a: {
             message: "",
             correct: true
