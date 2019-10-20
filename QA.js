@@ -1,78 +1,49 @@
 var counter = 0;
 
-var questions = ["", "", "", ""];
+var questions = ["You have encountered Titanium Satellite.",
+                "You have encountered Fiberglass Satellite.",
+                "You have encountered Super Gold Satellite.",
+                "DANGER!!! You have encountered Elon Musk's Space Roadster!"];
 
-var answers = {
-    1: {
-        a: {
-            message: "",
-            correct: true
+var answers = [
+    [
+        {
+            "message": "tammy",
+            "correct": true
         },
-        b: {
-            message: "",
-            correct: true
-        },
-        c: {
-            message: "",
-            correct: true
-        },
-        d: {
-            message: "",
-            correct: true
-        },
-    },
-    2: {
-        a: {
-            message: "",
-            correct: true
-        },
-        b: {
-            message: "",
-            correct: true
-        },
-        c: {
-            message: "",
-            correct: true
-        },
-        d: {
-            message: "",
-            correct: true
-        },
-    },
-    3: {
-        a: {
-            message: "",
-            correct: true
-        },
-        b: {
-            message: "",
-            correct: true
-        },
-        c: {
-            message: "",
-            correct: true
-        },
-        d: {
-            message: "",
-            correct: true
+        {
+            "message": "Yell at the Titanium Satellite to go away.",
+            "correct": false
         }
-    },
-    4: {
-        a: {
-            message: "",
-            correct: true
+    ],
+    [
+        {
+            "message": "Grab a hammer and try to smash the Fiberglass Satellite",
+            "correct": false
         },
-        b: {
-            message: "",
-            correct: true
-        },
-        c: {
-            message: "",
-            correct: true
-        },
-        d: {
-            message: "",
-            correct: true
+        {
+            "message": "Nah",
+            "correct": true
         }
-    }
-};
+    ],
+    [
+        {
+            "message": "Try to rip a piece off of it to keep as a souvenir.",
+            "correct": false
+        },
+        {
+            "message": "",
+            "correct": true
+        }
+    ],
+    [
+        {
+            "message": "",
+            "correct": true
+        },
+        {
+            "message": "Get in the roadster to attempt to drive in space.",
+            "correct": false
+        }
+    ]
+];
