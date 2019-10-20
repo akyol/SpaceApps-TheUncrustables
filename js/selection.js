@@ -6,7 +6,7 @@
 // starts and sets up the game with an intro.
 $(function () {
     $(".speech-bubble").text(narrator.intro);
-    sleep(7000).then(() => {
+    sleep(1000).then(() => {
         questionTime();
     })
     

@@ -1,6 +1,6 @@
 /* Overall */
 html, body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 	font-family: 'Press Start 2P', cursive;
 	color: white;
 	
@@ -8,11 +8,23 @@ html, body {
 
 .radiob {
 	position: absolute;
-	right: 60%;
-  	top: 100%;
+	/* right: 20px;
+	  bottom: 10px; */
+	/* margin-left: 5%;
+	margin-bottom: 5%; */
+	/* left: 29%;
+	top: 70%; */
 	border: 3px solid red;
-	max-width: 30%;
+	max-width: 40%;
+  /* margin-top: 25%; */
+	margin-top: 27%;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
+}
+
+.radiob div {
+	padding-bottom: 10px;
 }
 
 /* Progress Bar */
@@ -23,7 +35,7 @@ html, body {
 }
 
 .progress-bar {
-    background-color: #28a745;
+	background-color: #28a745;
 }
 
 /* Text box width */
@@ -59,8 +71,9 @@ html, body {
 }
 
 .Kimtrock {
+	margin: 10px;
 	position: absolute;
-    left: 200px;
+    left: 100px;
     top: 350px;
 }
 /* Radio buttons */
@@ -84,4 +97,20 @@ html, body {
 	margin-left: auto;
   	margin-right: auto;
 	background-image: url("img/Space_Background_1200x900.png");
+	overflow: hidden;
+}
+
+.orbit {
+	position: absolute;
+	  left: 40%;
+	  top: 45%;
+}
+h1 {
+	padding-top: 10px;
+}
+
+img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
