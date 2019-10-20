@@ -20,11 +20,15 @@ html, body {
 
 /* Text box */
 .speech-bubble {
+	margin: 100px;
     position: relative;
 	background: #00aabb;
     border-radius: .4em;
-    margin: 100px;
+    
+    
 }
+
+
 
 /* Text arrow */
 .speech-bubble:after {
