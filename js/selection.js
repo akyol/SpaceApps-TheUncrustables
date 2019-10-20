@@ -23,8 +23,9 @@ function questionTime() {
         div.textContent = question[index]["message"];
         div.onclick = (function () {
             if (question[index]["correct"] == false) {
-                var currVal = parseInt($(".progress-bar").attr("aria-valuenow"));
-                $(".progress-bar").attr("aria-valuenow", currVal - 10);
+                var currVal = parseInt($(".progress-bar").attr("aria-valuenow")) - 10;
+                $(".progress-bar").attr("aria-valuenow", currVal);
+                $(".progress-bar").css("width", currVal + "%");
             } else {
                 currency += 1000;
             }
@@ -47,6 +48,8 @@ function questionTime() {
 
 // Updates the game to Krimtrok's shop
 function shopTime() {
+    // document.body.style.backgroundImage = "url('img/Shop_Background.png')";
+    $('#pixelFrame').css('background-image', "url('img/Shop_Background2.png')");
     $(".speech-bubble").text(shopkeeper.intro);
     $(".radiob").empty();
     $(".orbital-debris").attr("src", "");
@@ -61,8 +64,9 @@ function shopTime() {
             } else {
                 $(".speech-bubble").text(shopkeeper.thanks);
                 currency -= items[index]["price"];
-                var currVal = parseInt($(".progress-bar").attr("aria-valuenow"));
-                $(".progress-bar").attr("aria-valuenow", currVal + items[index]["perk"]);
+                var currVal = parseInt($(".progress-bar").attr("aria-valuenow") + items[index]["perk"]);
+                $(".progress-bar").attr("aria-valuenow", currVal);
+                $(".progress-bar").css("width", currVal + "%");
             }
         });
         $(".radiob").append(div);
@@ -75,6 +79,7 @@ function shopTime() {
         $(".speech-bubble").text(shopkeeper.goodbye);
         sleep(3000).then(() => {    // there is no lock of buttons however
             $(".speech-bubble").text(narrator.continue);
+            $('#pixelFrame').css('background-image', "url('img/Space_Background2.png')");
             $(".radiob").empty();
             sleep(3000).then(() => {    // there is no lock of buttons however
                 questionTime();

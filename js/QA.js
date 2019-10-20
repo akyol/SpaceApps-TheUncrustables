@@ -2,15 +2,19 @@ var counter = 0;
 
 var currency = 0;
 
-var questions = ["You have encountered Titanium Satellite. What will you do?",
-                "You have encountered Fiberglass Satellite. What will you do?",
-                "You have encountered Super Gold Satellite. What will you do?",
-                "DANGER!!! You have encountered Elon Musk's Space Roadster! What will you do?"];
+var questions = ["You have encountered Titanium Satellite Orbital Debris. It's heading" + 
+                " straight for Earth! What will you do?",
+                "You have encountered Fiberglass Satellite Orbital Debris. Watch out! It's" + 
+                " shattered and very sharpWhat will you do?",
+                "You have encountered Super Gold Satellite Orbital Debris. All that gold" +
+                " is somewhat tempting. What will you do?",
+                "DANGER!!! You have encountered the scraps of Elon Musk's Space Roadster! " + 
+                "There is a large amount of Lithium-Ion. What will you do?"];
 
 var answers = [
     [
         {
-            "message": "tammy",
+            "message": "Fire lasers at the Titanium Satellite",
             "correct": true
         },
         {
@@ -24,23 +28,23 @@ var answers = [
             "correct": false
         },
         {
-            "message": "Nah",
+            "message": "Release nets to grab all the Fiberglass drifitng in space.",
             "correct": true
         }
     ],
     [
         {
-            "message": "Try to rip a piece off of it to keep as a souvenir.",
+            "message": "Try to rip a piece off to keep as a space souvenir.",
             "correct": false
         },
         {
-            "message": "",
+            "message": "Place the gold chunks in a space heater to melt it down to pure gold blocks.",
             "correct": true
         }
     ],
     [
         {
-            "message": "",
+            "message": "Send robots to retrieve the batteries back to Space HQ.",
             "correct": true
         },
         {
@@ -52,7 +56,7 @@ var answers = [
 
 var narrator = {
     "intro": "Hey adventurer! Are you ready to protect the Earth's ozone layer from orbital debris?" + 
-             "\nChoose the right actions to deal with the scrap metals and win the game. Let's start this!",
+             "Choose the right actions to deal with the scrap metals and win the game. Let's start this!",
     "continue": "Let's jump right back in!",
     "end": "Congratulations! You have protected the Earth's ozone layer!"
 }

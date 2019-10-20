@@ -7,7 +7,7 @@ html, body {
 }
 
 .radiob {
-	position: absolute;
+	/* position: absolute; */
 	/* right: 20px;
 	  bottom: 10px; */
 	/* margin-left: 5%;
@@ -17,7 +17,7 @@ html, body {
 	border: 3px solid red;
 	max-width: 40%;
   /* margin-top: 25%; */
-	margin-top: 27%;
+	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -46,16 +46,23 @@ html, body {
 
 /* Text box */
 .speech-bubble {
-	margin: 100px;
+	/* margin: 100px;
     position: relative;
 	background: #00aabb;
 	border-radius: .4em;   
 	color: black;
-	padding: 10px;
+	padding: 10px; */
+	padding-top: 31px;
+	height: 220px;
+	/* padding-bottom: 50px; */
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 
 /* Text arrow */
-.speech-bubble:after {
+/* .speech-bubble:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -68,7 +75,7 @@ html, body {
 	border-left: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
-}
+} */
 
 .Kimtrock {
 	margin: 10px;
@@ -96,7 +103,7 @@ html, body {
 	width: 1200px;
 	margin-left: auto;
   	margin-right: auto;
-	background-image: url("img/Space_Background_1200x900.png");
+	background-image: url("img/Space_Background2.png");
 	overflow: hidden;
 }
 
@@ -110,6 +117,8 @@ h1 {
 }
 
 img {
+	height: 200px;
+	padding-bottom: 20px;
 	display: block;
   margin-left: auto;
   margin-right: auto;
