@@ -1,13 +1,8 @@
 /* Overall */
-html {
+html, body {
     overflow-x: hidden;
 	font-family: 'Press Start 2P', cursive;
 	
-	
-}
-
-body {
-	background-image: linear-gradient(to bottom, #222034 , purple);
 	
 }
 
@@ -71,6 +66,4 @@ body {
     top: 0;
     z-index: -1;
 }
-
-
  
