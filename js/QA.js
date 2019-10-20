@@ -55,10 +55,14 @@ var answers = [
 ];
 
 var narrator = {
-    "intro": "Hey adventurer! Are you ready to protect the Earth's ozone layer from orbital debris?" + 
+    "intro": "Hey adventurer! Are you ready to protect Earth's ozone layer from orbital debris?" + 
              " Choose the right actions to deal with the scrap metals and win the game. Let's start this!",
     "continue": "Let's jump right back in!",
-    "end": "Congratulations! You have protected the Earth's ozone layer!"
+    "end": "Congratulations! You have protected the Earth's ozone layer!",
+    "goodResult": "Amazing! You are well on your way to preserving the Earth and its ozone layer along" +
+                    " with space exploration! We made something for you with all the orbital debris you collected.",
+    "badResult": "You managed to survive but you're not quite there yet. I recommend you to find" +
+                " out more about orbital debris. Follow this site:"
 }
 
 var shopkeeper = {

@@ -5,13 +5,36 @@
 
 // starts and sets up the game with an intro.
 $(function () {
+    // $('#myAudio').play();
     $(".speech-bubble").text(narrator.intro);
     hideBox();
-    sleep(1000).then(() => {
+    sleep(8000).then(() => {
         questionTime();
         showBox();
     })
 })
+
+function result() {
+    $(".speech-bubble").text(narrator.end);
+    $(".radiob").empty();
+    $(".orbital-debris").attr("src", "");
+    hideBox();
+    sleep(4000).then(() => {
+        var currVal = parseInt($(".progress-bar").attr("aria-valuenow"));
+        if (currVal < 100) {
+            $(".speech-bubble").text(narrator["badResult"]);
+            var link = document.createElement('a');
+            link.href = 'https://orbitaldebris.jsc.nasa.gov/faq/#';
+            link.textContent = "Link";
+            $(".speech-bubble").append(link);
+        } else {
+            $(".speech-bubble").text(narrator["goodResult"]);
+            sleep(3000).then(() => {
+                $(".orbital-debris").attr("src", "img/VictoryShip.png");
+            })
+        }
+    })
+}
 
 // loads the next set of questions, answer choices, and orbital debris to interacte with.
 function questionTime() {
@@ -29,11 +52,11 @@ function questionTime() {
                 $(".progress-bar").css("width", currVal + "%");
             } else {
                 currency += 1000;
+                $("#currency").text(currency + "C");
             }
             if (counter == questions.length) {
-                $(".speech-bubble").text(narrator.end);
-                $(".radiob").empty();
-                $(".orbital-debris").attr("src", "");
+                result();
+                
             } else {
                 if (counter % 2 == 0) {
                     shopTime();
@@ -58,13 +81,14 @@ function shopTime() {
     // Set up items to shop and buy
     $.each(items, function (index, value) {
         var div = document.createElement("div");
-        div.textContent = items[index]["name"] + "\t" + items[index]["price"] + "G";
+        div.textContent = items[index]["name"] + "\t" + items[index]["price"] + "C";
         div.onclick = (function () {
             if (currency < items[index]["price"]) {
                 $(".speech-bubble").text(shopkeeper.unable);
             } else {
                 $(".speech-bubble").text(shopkeeper.thanks);
                 currency -= items[index]["price"];
+                $("#currency").text(currency + "C");
                 var currVal = parseInt($(".progress-bar").attr("aria-valuenow")) + items[index]["perk"];
                 $(".progress-bar").attr("aria-valuenow", currVal);
                 $(".progress-bar").css("width", currVal + "%");

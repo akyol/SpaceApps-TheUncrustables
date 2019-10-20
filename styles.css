@@ -20,8 +20,12 @@ h1, h6 {
  }
 
  #currency {
-	 float:right;
+	 float: left;
 	 color: #D4AF37;
+	 border:  5px solid #D4AF37;
+	 margin-left: 30px;
+	 width: 100px;
+	 text-align: right;
  }
 
  #top {
@@ -100,11 +104,6 @@ h1
 #title {
 	/* float:left; */
 	/* vertical-align: middle; */
-}
-
-#currency {
-	float: right;
-	padding-right: 30px;
 }
 
 .radiob div:hover {
