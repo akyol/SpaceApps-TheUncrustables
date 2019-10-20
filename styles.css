@@ -1,9 +1,15 @@
 /* Overall */
 html, body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 	font-family: 'Press Start 2P', cursive;
 	color: white;
 	
+}
+
+.radiob {
+	border: 3px solid red;
+	max-width: 40%;
+	text-align: center;
 }
 
 h1 {
@@ -31,7 +37,8 @@ h1 {
 	margin: 100px;
     position: relative;
 	background: #00aabb;
-    border-radius: .4em;   
+	border-radius: .4em;   
+	color: black;
 }
 
 /* Text arrow */
@@ -51,7 +58,7 @@ h1 {
 }
 
 .Kimtrock {
-	position: absolute;
+	position: relative;
     left: 600px;
     top: 325px
 }
@@ -64,9 +71,16 @@ h1 {
 }
 
 .image {
-	position: absolute;
+	/* position: absolute; */
     left: 360px;
     top: 0;
     z-index: -1;
 }
  
+#pixelFrame {
+	height: 900px;
+	width: 1200px;
+	margin-left: auto;
+  	margin-right: auto;
+	background-image: url("img/Space_Background_1200x900.png");
+}
