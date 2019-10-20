@@ -5,7 +5,7 @@
 
 // starts and sets up the game with an intro.
 $(function () {
-    $(".text-box").text(narrator.intro);
+    $(".speech-bubble").text(narrator.intro);
     sleep(7000).then(() => {
         questionTime();
     })
@@ -14,9 +14,9 @@ $(function () {
 
 // loads the next set of questions, answer choices, and orbital debris to interacte with.
 function questionTime() {
-    $(".text-box").text(questions[counter]);
+    $(".speech-bubble").text(questions[counter]);
     $(".orbital-debris").attr("src", orbitalDebris[counter]);
-    $(".selection-box").empty();
+    $(".radiob").empty();
     $.each(answers[counter], function (index, value) {
         var question = answers[counter];
         var div = document.createElement("div");
@@ -29,8 +29,8 @@ function questionTime() {
                 currency += 1000;
             }
             if (counter == questions.length) {
-                $(".text-box").text(narrator.end);
-                $(".selection-box").empty();
+                $(".speech-bubble").text(narrator.end);
+                $(".radiob").empty();
                 $(".orbital-debris").attr("src", "");
             } else {
                 if (counter % 2 == 0) {
@@ -40,15 +40,15 @@ function questionTime() {
                 }
             }    
         });
-        $(".selection-box").append(div);
+        $(".radiob").append(div);
     });
     counter++;
 }
 
 // Updates the game to Krimtrok's shop
 function shopTime() {
-    $(".text-box").text(shopkeeper.intro);
-    $(".selection-box").empty();
+    $(".speech-bubble").text(shopkeeper.intro);
+    $(".radiob").empty();
     $(".orbital-debris").attr("src", "");
 
     // Set up items to shop and buy
@@ -57,32 +57,32 @@ function shopTime() {
         div.textContent = items[index]["name"] + "\t" + items[index]["price"] + "G";
         div.onclick = (function () {
             if (currency < items[index]["price"]) {
-                $(".text-box").text(shopkeeper.unable);
+                $(".speech-bubble").text(shopkeeper.unable);
             } else {
-                $(".text-box").text(shopkeeper.thanks);
+                $(".speech-bubble").text(shopkeeper.thanks);
                 currency -= items[index]["price"];
                 var currVal = parseInt($(".progress-bar").attr("aria-valuenow"));
                 $(".progress-bar").attr("aria-valuenow", currVal + items[index]["perk"]);
             }
         });
-        $(".selection-box").append(div);
+        $(".radiob").append(div);
     });
 
     // set up leave shop
     var div = document.createElement("div");
     div.textContent = "Leave the shop";
     div.onclick = (function () {
-        $(".text-box").text(shopkeeper.goodbye);
+        $(".speech-bubble").text(shopkeeper.goodbye);
         sleep(3000).then(() => {    // there is no lock of buttons however
-            $(".text-box").text(narrator.continue);
-            $(".selection-box").empty();
+            $(".speech-bubble").text(narrator.continue);
+            $(".radiob").empty();
             sleep(3000).then(() => {    // there is no lock of buttons however
                 questionTime();
             })
         })
         
     });
-    $(".selection-box").append(div);
+    $(".radiob").append(div);
 }
 
 // timer to wait and pause
