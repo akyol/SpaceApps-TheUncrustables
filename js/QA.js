@@ -56,7 +56,7 @@ var answers = [
 
 var narrator = {
     "intro": "Hey adventurer! Are you ready to protect the Earth's ozone layer from orbital debris?" + 
-             "Choose the right actions to deal with the scrap metals and win the game. Let's start this!",
+             " Choose the right actions to deal with the scrap metals and win the game. Let's start this!",
     "continue": "Let's jump right back in!",
     "end": "Congratulations! You have protected the Earth's ozone layer!"
 }
