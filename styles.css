@@ -7,8 +7,9 @@ html, body {
 }
 
 .radiob {
-	border: 5px solid red;
+	border: 3px solid red;
 	max-width: 40%;
+	text-align: center;
 }
 
 /* Progress Bar */
