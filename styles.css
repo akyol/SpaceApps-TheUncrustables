@@ -7,8 +7,11 @@ html, body {
 }
 
 .radiob {
+	position: absolute;
+	right: 60%;
+  	top: 100%;
 	border: 3px solid red;
-	max-width: 40%;
+	max-width: 30%;
 	text-align: center;
 }
 
@@ -36,6 +39,7 @@ html, body {
 	background: #00aabb;
 	border-radius: .4em;   
 	color: black;
+	padding: 10px;
 }
 
 /* Text arrow */
@@ -55,9 +59,9 @@ html, body {
 }
 
 .Kimtrock {
-	position: relative;
-    left: 600px;
-    top: 325px
+	position: absolute;
+    left: 200px;
+    top: 350px;
 }
 /* Radio buttons */
 .group {
