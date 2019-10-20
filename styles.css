@@ -1,7 +1,14 @@
 /* Overall */
-html, body {
+html {
     overflow-x: hidden;
-    font-family: 'Press Start 2P', cursive;
+	font-family: 'Press Start 2P', cursive;
+	
+	
+}
+
+body {
+	background-image: linear-gradient(to bottom, #222034 , purple);
+	
 }
 
 /* Progress Bar */
@@ -19,6 +26,7 @@ html, body {
 .container {
     max-width: 900px;
 }
+
 
 /* Text box */
 .speech-bubble {
@@ -46,7 +54,7 @@ html, body {
 
 .Kimtrock {
 	position: absolute;
-    left: 267px;
+    left: 600px;
     top: 325px
 }
 /* Radio buttons */
@@ -56,4 +64,13 @@ html, body {
   	padding: 50px;
   	margin: 20px;
 }
+
+.image {
+	position: absolute;
+    left: 360px;
+    top: 0;
+    z-index: -1;
+}
+
+
  
