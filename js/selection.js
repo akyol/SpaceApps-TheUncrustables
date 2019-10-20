@@ -1,7 +1,6 @@
 // Abraham Lee
-// The Uncrustables
+// The Uncrustables Team
 // SpaceApps 2019
-
 
 // starts and sets up the game with an intro.
 $(function () {

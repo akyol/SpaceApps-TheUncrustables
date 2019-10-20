@@ -1,3 +1,5 @@
+// data to use
+
 var counter = 0;
 
 var currency = 0;
