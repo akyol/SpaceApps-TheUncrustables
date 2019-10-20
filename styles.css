@@ -7,9 +7,26 @@ html, body {
 	background-image: linear-gradient(#222034, #4a4397);
 }
 
-h1, h3 {
+h1, h6 {
 	text-align: center;
 }
+ h6 {
+	 color: #ff6600;
+	 padding-top: 10px;
+ }
+
+ #title {
+	 text-align: center;
+ }
+
+ #currency {
+	 float:right;
+	 color: #D4AF37;
+ }
+
+ #top {
+	 display: inline-block;
+ }
 
 .radiob {
 	/* position: absolute; */
@@ -19,7 +36,8 @@ h1, h3 {
 	margin-bottom: 5%; */
 	/* left: 29%;
 	top: 70%; */
-	border: 3px solid red;
+	border-radius: 25px;
+	border: 5px solid #9B30FF;
 	max-width: 40%;
   /* margin-top: 25%; */
 	margin-top: 50px;
@@ -60,10 +78,33 @@ h1, h3 {
 	padding-top: 31px;
 	height: 220px;
 	/* padding-bottom: 50px; */
-	width: 40%;
+	width: 39%;
 	margin-left: auto;
 	margin-right: auto;
 
+}
+
+/* #title-container
+{
+	text-align:center;
+	padding-top: 10px;
+} */
+h1
+{
+	/* float: middle; */
+	/* text-align:center; */
+	/* width: 50%; */
+	/* margin: none; */
+}
+
+#title {
+	/* float:left; */
+	/* vertical-align: middle; */
+}
+
+#currency {
+	float: right;
+	padding-right: 30px;
 }
 
 .radiob div:hover {
@@ -113,7 +154,7 @@ h1, h3 {
 	margin-left: auto;
   	margin-right: auto;
 	background-image: url("img/Space_Background2.png");
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .orbit {

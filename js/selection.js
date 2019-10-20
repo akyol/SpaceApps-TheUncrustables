@@ -6,10 +6,11 @@
 // starts and sets up the game with an intro.
 $(function () {
     $(".speech-bubble").text(narrator.intro);
+    hideBox();
     sleep(1000).then(() => {
         questionTime();
+        showBox();
     })
-    
 })
 
 // loads the next set of questions, answer choices, and orbital debris to interacte with.
@@ -23,7 +24,7 @@ function questionTime() {
         div.textContent = question[index]["message"];
         div.onclick = (function () {
             if (question[index]["correct"] == false) {
-                var currVal = parseInt($(".progress-bar").attr("aria-valuenow")) - 10;
+                var currVal = parseInt($(".progress-bar").attr("aria-valuenow")) - 20;
                 $(".progress-bar").attr("aria-valuenow", currVal);
                 $(".progress-bar").css("width", currVal + "%");
             } else {
@@ -64,7 +65,7 @@ function shopTime() {
             } else {
                 $(".speech-bubble").text(shopkeeper.thanks);
                 currency -= items[index]["price"];
-                var currVal = parseInt($(".progress-bar").attr("aria-valuenow") + items[index]["perk"]);
+                var currVal = parseInt($(".progress-bar").attr("aria-valuenow")) + items[index]["perk"];
                 $(".progress-bar").attr("aria-valuenow", currVal);
                 $(".progress-bar").css("width", currVal + "%");
             }
@@ -81,8 +82,10 @@ function shopTime() {
             $(".speech-bubble").text(narrator.continue);
             $('#pixelFrame').css('background-image', "url('img/Space_Background2.png')");
             $(".radiob").empty();
+            hideBox();
             sleep(3000).then(() => {    // there is no lock of buttons however
                 questionTime();
+                showBox();
             })
         })
         
@@ -93,4 +96,12 @@ function shopTime() {
 // timer to wait and pause
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
+function hideBox() {
+    $(".radiob").hide();
+}
+
+function showBox() {
+    $(".radiob").show();
 }
