@@ -18,6 +18,12 @@ html, body {
 
 h1 {
 	color: white;
+	padding-top: 3%;
+}
+
+h6 {
+	color: #ff6600;
+	padding-top: 3%;
 }
 /* Progress Bar */
 .progress {
