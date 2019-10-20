@@ -2,10 +2,13 @@
 html, body {
     overflow-x: hidden;
 	font-family: 'Press Start 2P', cursive;
-	
+	color: white;
 	
 }
 
+h1 {
+	color: white;
+}
 /* Progress Bar */
 .progress {
     width: 50%;
