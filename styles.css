@@ -28,7 +28,6 @@ html, body {
 
 /* Text arrow */
 .speech-bubble:after {
-    
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -41,5 +40,12 @@ html, body {
 	border-left: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
+}
+
+.group {
+	width: 300px;
+  	border: 15px solid green;
+  	padding: 50px;
+  	margin: 20px;
 }
  
