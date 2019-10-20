@@ -1,8 +1,10 @@
+/* Overall */
 html, body {
     overflow-x: hidden;
     font-family: 'Press Start 2P', cursive;
 }
 
+/* Progress Bar */
 .progress {
     width: 50%;
     margin-left: auto;
@@ -23,12 +25,8 @@ html, body {
 	margin: 100px;
     position: relative;
 	background: #00aabb;
-    border-radius: .4em;
-    
-    
+    border-radius: .4em;   
 }
-
-
 
 /* Text arrow */
 .speech-bubble:after {
@@ -46,6 +44,12 @@ html, body {
 	margin-bottom: -20px;
 }
 
+.Kimtrock {
+	position: absolute;
+    left: 267px;
+    top: 325px
+}
+/* Radio buttons */
 .group {
 	width: 300px;
   	border: 15px solid green;
